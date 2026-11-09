@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>נשים מעוררות השראה</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<meta name="description" content="טריוויה: 10 שאלות על נשים מעוררות השראה">
+<meta property="og:title" content="נשים מעוררות השראה">
+<meta property="og:description" content="10 שאלות על נשים מהעולם ומישראל. משחקים מהטלפון">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://women-trivia.sites.tab.bot/og.png">
+<meta property="og:locale" content="he_IL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6d4cf5">
+<link rel="preload" href="fonts/rubik-hebrew.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css?v=9">
+</head>
+<body>
+<main class="p-wrap" id="app">
+  <header class="p-head">
+    <h1>נשים מעוררות השראה</h1>
+  </header>
+
+  <section class="screen active" id="s-start" aria-labelledby="start-h">
+    <div class="panel">
+      <h2 id="start-h" class="rem-h">💜 נשים מעוררות השראה</h2>
+      <p class="p-sub" style="margin-top:0">מדע, חינוך, מנהיגות וטכנולוגיה: נשים מהעולם ומישראל ששינו את התחום שלהן.</p>
+      <p class="p-sub">10 שאלות. בכל שאלה בוחרות תשובה, והתוצאות מופיעות על המסך.</p>
+      <div class="namebox">
+        <label class="nm" for="name">איך קוראים לך? <span class="nm-sub">(יופיע בלוח האליפות)</span></label>
+        <input class="inp" id="name" maxlength="24" autocomplete="nickname" placeholder="שם פרטי או כינוי">
+      </div>
+      <button class="btn btn-primary" id="startBtn" type="button">מתחילים ←</button>
+      <div class="waitbox" id="waitbox" role="status"><span class="spin" aria-hidden="true"></span><span id="waitTxt">מחכות שהמנחה תתחיל…</span></div>
+      <p class="me-name" id="meName" style="display:none"></p>
+    </div>
+  </section>
+
+  <section class="screen" id="s-card" aria-live="polite">
+    <div class="progress"><span id="prog">שאלה 1 מתוך 7</span><div class="dots" id="dots"></div></div>
+    <article class="scard">
+      <span class="num" id="cnum">1</span>
+      <h2 class="role" id="crole"></h2>
+      <p class="txt" id="ctext"></p>
+    </article>
+    <p class="q">מה התשובה?</p>
+    <div class="opts" id="opts" role="group" aria-label="בחירת תשובה"></div>
+    <div class="navrow" id="navrow">
+      <button class="btn btn-ghost" id="prevBtn" type="button">→ הקודם</button>
+      <button class="btn btn-ghost" id="nextBtn" type="button">הבא ←</button>
+    </div>
+    <p class="hint" id="hint">אפשר לחזור ולשנות תשובה בכל רגע</p>
+  </section>
+
+  <section class="screen" id="s-done">
+    <div class="done-wrap">
+      <div class="big-emoji">🎉</div>
+      <h2>תודה! הסתכלו על המסך</h2>
+      <p id="doneSub">רוצים לשנות משהו? לחצי על שאלה</p>
+      <ul class="summary" id="summary"></ul>
+    </div>
+  </section>
+
+  <section class="screen" id="s-fb" aria-live="polite">
+    <div class="fb" id="fb"></div>
+  </section>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<script src="cards.js?v=9"></script>
+<script src="fx.js?v=9"></script>
+<script src="app.js?v=9"></script>
+</body>
+</html>
